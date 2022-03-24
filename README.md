@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<div >
+  
+  # Hamburguer menu React Js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  This is a simple project I've made to show how a hamburger menu works in React Js. 
 
-## Available Scripts
+  ![navBar](https://user-images.githubusercontent.com/70671093/159998925-a8d68727-e0c0-4160-bcb1-6b94302ed25c.gif)
 
-In the project directory, you can run:
+  ## The Project
 
-### `npm start`
+  First, I created the project design on the figma platform
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ![image](https://user-images.githubusercontent.com/70671093/159999131-8608236f-b86e-4474-867f-eb18149b837c.png)
+  
+  ## How it works
+  
+  I created a folder in component where I will put the files that will be responsible for the menu 
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160001235-6da46cce-2ccd-43b6-a7af-6253ea674173.png)
+  
+  In the NavLinks file I put the html of the navigation menu 
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160006040-996b62ce-e5d5-4368-9dcc-61a91a221ca0.png)
+  
+  And I imported this file in both MobileNavigaiton and Navigation.
+  the MobileNavigation file will be responsible for the mobile settings while the Navigation file will be responsible for the web settings.
+  
+  I import both Mobile Navigation and Navigation files in the Navbar file. The Navbar file will be responsible for rendering both.
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160003159-fddd8646-0d6a-46f7-a383-4828aebb3275.png)
+  
+  ## Mobile Configuration
+  
+  In the MobileNavigation file I make use of useState which will tell me the state of the menu.
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160004787-e5b4f7d3-4f7f-44bb-b585-4e932bbfe845.png)
+  
+  then I import the images that I will use for the hamburger menu. I created a click event that calls an anonymous function and changes between true and false each   time this event is called
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160004907-65528315-600a-486e-80ca-eb2fc86012b2.png)
+  
+  I make use of the ternary operator to know if the menu is open or not. if true, show const closeIcon on screen and if false, show const hamburguerIcon instead.
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160006897-2b6baceb-5560-47d6-9070-97ecbdfb655a.png)
+  
+  When the hamburger menu is activated, clicking on the navigation menus will not close the menu. To solve this problem I made use of props.
+  I created a function called closeMobileMenu that will pass the value of open to false.
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160009898-566b5248-5da8-4bbc-bb74-9a0097cd4bdd.png)
+  
+  And pass some parameters to the NavLinks file
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160010081-aa4d7bc9-0588-4eeb-8d81-535738c252a3.png)
+  
+  And I pass these parameters through a click event inside the NavLinks file on each li.
+  
+  ![image](https://user-images.githubusercontent.com/70671093/160010585-16256aac-e1ec-4f82-99de-9ff651e22ec1.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
+</div>
