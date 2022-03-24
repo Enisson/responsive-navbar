@@ -1,0 +1,38 @@
+body {
+    background-color: #3F4350;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    color: white;
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.container h1::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to left, #FAB818, #EF4323);
+}
+
+.container p {
+    color: white;
+    font-size: .8rem;
+}
+
+.container > p {
+    margin-bottom: 2rem;
+}
+

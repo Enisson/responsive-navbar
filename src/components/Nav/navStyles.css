@@ -1,0 +1,113 @@
+.menuContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 10%;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: #23252B;
+}
+.menuNav {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Nav {
+    display: flex;
+    
+
+}
+
+.Nav li + li {
+    margin-left: 1rem;
+}
+
+.Nav li {
+    list-style: none;
+    padding: 10px;
+    
+}
+
+
+.Nav li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    position: relative;
+}
+
+.Nav li a:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to left, #FAB818, #EF4323);
+}
+
+.perfil {
+    width: 35px;
+}
+
+
+.MobileNavigation {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .perfil {
+        display: none;
+    }
+    
+    .Navigation {
+        display: none;
+    }
+
+    .MobileNavigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .Hamburguer {
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .Nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 48px;
+        right: 0;
+        width: 100%;
+        background-color: #23252B;
+        z-index: 99;
+        
+    }
+    .Nav li + li {
+        margin: 0;   
+    }
+
+    .Nav li {
+        margin: 0;
+        padding-left: 5%;
+        text-align: center;
+    }
+    
+    .Nav li a {
+        background-color: #18181800;
+    }
+
+    .Nav li a:hover::before  {
+        background: none;
+    }
+
+    .Nav a:hover {
+        color: #EF4323;
+    }
+}
