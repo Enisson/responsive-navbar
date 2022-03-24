@@ -73,7 +73,7 @@
     .Hamburguer {
         position: absolute;
         right: 5%;
-        top: 5%;
+        top: 10px;
         cursor: pointer;
         z-index: 999;
     }
